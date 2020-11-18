@@ -1,0 +1,980 @@
+/** global element styling **/
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(23,16,16);
+}
+
+
+header .logo {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+header .logo svg {
+	width: 64;
+	height: 32;
+}
+
+header span.button-text {
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box {
+  width: 60%;
+  position: relative;
+  display: flex;
+
+}
+
+.search {
+  width: 100%;
+  border: none;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  outline: none;
+  color: #9dbfaf;
+  border-radius: 5px 0 0 5px;
+}
+
+.search:focus {
+  color: #000;
+  border: 2px solid #fda253;
+}
+
+.search-btn {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #fda253;
+  background: #fff;
+  text-align: center;
+  color: #555555;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.banner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 10px 40px;
+}
+
+.banner img {
+	width: 970px;
+	height: 250px;
+	cursor: pointer;
+}
+
+#page-wrapper {
+  position: relative;
+  margin: 20px 30px 60px;
+  padding: 10px 30px;
+/*  background: #008080;*/
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 30px;
+ /* background: #ff8000;*/
+}
+
+.main .up-next {
+  height: 445px;
+  width: 29%;
+  background: #333333;
+}
+
+.text-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-button button#browse {
+  font-size: 15px;
+  background: #f9c70c;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+.text-button button#browse:hover, .text-button button#signin:hover {
+  background: #f4bc1c;
+}
+
+.text-button button#signin {
+  font-size: 15px;
+  background: #f9c70c;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 90px;
+  cursor: pointer;
+}
+
+.more-to-watch {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.more-to-watch .text-button button {
+  background: transparent;
+  border-radius: 4px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 100px;
+  cursor: pointer;
+}
+
+.more-to-watch .text-button button:hover {
+  background: #333333;
+}
+
+.top-box-office {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*  background: #800000;*/
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.top-box-office .movie-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  padding: 4px 10px;
+}
+
+.top-box-office .movie-list .movie-name {
+  display: flex;
+  padding: 20px 0;
+/*  background: #000080;*/
+  width: 100%;
+  cursor: pointer;
+}
+
+.top-box-office .movie-list .movie-name p {
+  color: #fff;
+  font-size: 18px;
+}
+
+.top-box-office .movie-list .movie-name p:hover, .top-box-office .movie-list .movie-name span:hover {
+  color: #d3d3d3;
+}
+
+.top-box-office .movie-list .movie-name aside {
+  color: #f9c70c;
+  padding: 0 4px;
+}
+
+
+/* Carousel*/
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+  cursor: pointer;
+}
+
+.carousel:hover {
+  opacity: 80%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+  display: none;
+}
+
+.carousel .carousel__item img {
+  width: 670px;
+  height: 450px;
+  width: 100%;
+}
+
+.carousel .carousel__item--visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+  border-radius: 2px;
+  border: 1px solid #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 45px;
+  height: 55px;
+  color: #fff;
+  font-size: 27px;
+  background: transparent;
+}
+
+.carousel .carousel__actions button:hover {
+  color: #f4bc1c;
+}
+
+.carousel .carousel__actions button#carousel__button--prev {
+  margin-left: 20px;
+}
+
+.carousel .carousel__actions button#carousel__button--next {
+  margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+
+/* That's it for carousel*/
+
+
+.main-heading h2 {
+  color: #f4bc1c;
+  padding: 2px 5px;
+  font-size: 30px;
+  margin-bottom: 20px;
+
+}
+
+.main-heading h2#featured-today {
+  border-left: 4px solid #f4bc1c;
+  border-radius: 2px;
+}
+
+
+.sub-heading h2 {
+  color: #fff;
+	padding: 2px 5px;
+  font-size: 24px;
+	border-left: 4px solid #f4bc1c;
+  border-radius: 2px;
+  margin: 2px 0 2px;
+}
+
+.sub-heading p.subtitle {
+  color: #999999;
+  font-size: 18px;
+  margin: 4px 0 8px;
+  font-weight: normal;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px;
+ /* background: #ff8000;*/
+
+}
+
+.birthday-card {
+  width: 200px;
+  height: 240px;
+  background: #000;
+  margin: 10px 12px;
+  cursor: pointer;
+}
+
+.birthday-card .birthday-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #1167b1;
+  margin: 0 auto;
+}
+
+.birthday-card .birthday-img:hover {
+  opacity: 80%;
+}
+
+.birthday-card p {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.birthday-card #image1 {
+  background: url(https://imgix.bustle.com/uploads/getty/2019/10/15/b5448f9f-9543-417b-9b08-28e3617b2f76-getty-1152943980.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image2 {
+  background: url(https://static.wikia.nocookie.net/friends/images/e/ef/MissiPyle.png/revision/latest?cb=20181025150141);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image3 {
+  background: url(https://www.goldenglobes.com/sites/default/files/styles/portrait_medium/public/people/cover_images/maggie_gyllenhaal_072517_deuce_tv_1.jpg?itok=48LWlWap);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image4 {
+  background: url(https://www3.pictures.zimbio.com/gi/SAG+AFTRA+Foundation+Honors+Rashida+Jones+rPACmvbtQ94l.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image5 {
+  background: url(https://www.biography.com/.image/t_share/MTU2OTY0MDkyNTAwNzgwNzUw/pete-davidson-arrives-at-the-2017-mtv-video-music-awards-at-the-forum-on-august-27-2017-in-inglewood-california-photo-by-jon-kopaloff_filmmagic.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image6 {
+  background: url(https://lemieuxcosmetics.com/wp-content/uploads/2016_6_14_nytimes400.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.featuring {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px;
+/*  background: #ff8000;*/
+  max-width: 70%;
+}
+
+
+.featured {
+  width: 400px;
+  height: 250px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.featured .featured-img {
+  width: 100%;
+  height: 220px;
+}
+
+.featured .featured-img:hover {
+  opacity: 80%;
+}
+
+.featured p {
+  color: #fff;
+  margin: 4px 0;  
+}
+
+.featured #f1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZDI4ZThhOGUtM2JhZC00OTE0LWFkZDUtNjdiNDQyNzI3ZGNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.featured #f2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNzM5ZjNhNjQtYTBmNi00ZTIzLTk5NzYtZDkxZTdjM2RiMjM2XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.editorpicks-card {
+  width: 390px;
+  height: 240px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.editorpicks-card .editorspicks-img {
+  width: 100%;
+  height: 196px;
+}
+
+.editorpicks-card .editorspicks-img:hover {
+  opacity: 80%;
+}
+
+
+.editorpicks-card p {
+  color: #fff;
+  margin: 8px 0;  
+}
+
+.editorpicks-card #ep1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTE4NjdmMTktNGU0Ni00Zjc5LTk3NGMtZTNkMmU1NzU5ZGY5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.editorpicks-card #ep2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMzAyOTIzNWUtN2I1Mi00YjhhLWIwNjAtNTg5NzNhNTRjOWE3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.editorpicks-card #ep3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNjk3ZmFlNzAtMTkxYy00NmEwLTkxMzItNzYxNzA4M2FhN2I1XkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UY281_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.comingsoon {
+  width: 400px;
+  height: 240px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.comingsoon .coming-img {
+  width: 100%;
+  height: 200px;
+}
+
+.comingsoon .coming-img:hover {
+  opacity: 80%;
+}
+
+.comingsoon p {
+  color: #fff;
+  margin: 8px 0;
+}
+
+.comingsoon #cms1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZjQ2MTEzNWEtOGRmOS00MDk2LWFhZDgtMDVkZmY3Y2ZmM2FiXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.comingsoon #cms2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNjY0NTc2OWQtNmRhNy00NTQ5LWJlYzktZWE0MGE4NDliNTA3XkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_UX500_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.comingsoon #cms3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMGNmZGI3ODEtNmUyNi00NWEwLTlmYmQtNmJkYjQwMDllYmFhXkEyXkFqcGdeQWFybm8@._V1_UY281_CR0,0,500,281_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.video-card {
+  width: 390px;
+  height: 240px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.video-card .video {
+  width: 100%;
+  height: 196px;
+}
+
+.video-card .video:hover {
+  opacity: 80%;
+}
+
+
+.video-card p {
+  color: #fff;
+  margin: 8px 0;
+}
+
+.video-card #vc1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+.video-card #vc2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+.video-card #vc3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+.news-card {
+  width: 380px;
+  height: 133px;
+/*  background: #ffa500;*/
+  margin: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.news-card:hover {
+  opacity: 85%;
+}
+
+.news-card .news-image {
+  width: 90px;
+  height: 133px;
+  background: #197402;
+}
+
+.news-card .news-item {
+  padding: 4px 10px;
+  width: 280px;
+  background: #000;
+  color: #fff;
+}
+
+
+.news-card .news-item span {
+  color: #d3d3d3;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.news-card #newsimg1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMWU0MGYwZWQtMzcwYS00NWVhLTlkZTAtYWVjOTYwZTBhZTBiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX90_CR0,0,90,133_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.news-card #newsimg2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZmM3MWNjNDgtYTlkMy00YmViLWJkYjYtZDQzYmU5YjhkNjY3XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_UY133_CR59,0,90,133_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.news-card #newsimg3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZjY4NTcyMzMtZmMwOC00MmFjLWJmZjEtNDcxNTE5OTZmNjM4XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UY133_CR55,0,90,133_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.news-button {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.news-button button {
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 6px 21px;
+  cursor: pointer;
+  margin: 6px;
+}
+
+.news-button button:hover {
+  background: #333333;
+}
+
+
+.poster-card {
+  width: 180px;
+  height: 480px;
+  background: #1b1b1b;
+  margin: 10px 12px;
+  border-radius: 4px;
+}
+
+.poster-card .image {
+  width: 100%;
+  height: 267px;
+  cursor: pointer;
+}
+
+.poster-card .image:hover {
+  opacity: 80%;
+}
+
+.poster-card #img1 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/3/3c/Poster_of_Mirzapur_2018.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img2 {
+  background: url(https://mamasgeeky.com/wp-content/uploads/2020/11/the-queens-gambit-poster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNjgxZTMxNmQtZGFkZS00NDUyLTllMzYtOTE0ZjdlMjM1ZWU0XkEyXkFqcGdeQXVyMTAyMTE1MDA1._V1_UX182_CR0,0,182,268_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img4 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR85,0,630,1200_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img5 {
+  background: url(https://i.etsystatic.com/15375993/r/il/cbafe5/1303342253/il_570xN.1303342253_qphh.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img6 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img7 {
+  background: url(https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img8 {
+  background: url(https://i.pinimg.com/originals/28/b9/95/28b995d070004d19862569ade1e820ef.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img9 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img10 {
+  background: url(https://i.pinimg.com/originals/cc/47/a5/cc47a507854dfe4ea145ebb4c9ae51c4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img11 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img12 {
+  background: url(https://www.easterneye.biz/wp-content/uploads/2020/10/Chhalaang-Poster-.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img13 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/5/58/Borat_2_poster.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img14 {
+  background: url(https://images-na.ssl-images-amazon.com/images/I/61bMkkwpduL._AC_SY741_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img15 {
+  background: url(https://i.etsystatic.com/16355321/r/il/23bda1/1427065762/il_570xN.1427065762_j2cy.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img16 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMjNkMzc2N2QtNjVlNS00ZTk5LTg0MTgtODY2MDAwNTMwZjBjXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img17 {
+  background: url(https://images-na.ssl-images-amazon.com/images/I/61k7Mx2IjzL._SY550_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img18 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img19 {
+  background: url(https://3.imimg.com/data3/MV/VT/MY-7854615/bollywood-paper-poster-500x500.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img20 {
+  background: url(https://m.media-amazon.com/images/M/MV5BN2ZhMTI3MDctYTlhYy00NjBlLWEyOGEtYzE3MjM4MWFkNmQwXkEyXkFqcGdeQXVyNTA3NTQ4OTg@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img21 {
+  background: url(https://www.filmibeat.com/ph-big/2017/05/baahubali-2-the-conclusion_149577721640.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img22 {
+  background: url(https://images-na.ssl-images-amazon.com/images/I/91f1iuBw%2B3L._SL1430_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img23 {
+  background: url(https://buzz.tt/media/posters/53/posters_1_1500.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img24 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/7/78/Bunty_Aur_Babli_poster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ratings, .movie-title, .watchlist, .trailer-and-info {
+  padding: 10px 15px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ratings span {
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+.ratings svg {
+  width: 15px;
+  height: 15px;
+  color: yellow;
+  margin: 0 5px;
+}
+
+.watchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  margin: 2px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.watchlist span {
+  color: #2a9df4;
+  /*padding: 6px 15px;*/
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.watchlist svg {
+  color: #2a9df4;
+  width: 21px;
+  height: 21px;
+/*  margin: 0 5px;*/
+  /*padding-top: 4px;*/
+}
+
+.watchlist:hover {
+  background: #555555;
+
+}
+
+.movie-title {
+  width: 160px;
+  height: 58px;
+}
+
+
+.trailer-and-info {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trailer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  padding: 4px 10px;
+  border-radius: 2px;
+/*  padding: 2px 6px;
+*/
+}
+
+.trailer span {
+  font-weight: bold;
+}
+
+.info {
+  color: gray;
+  padding: 6px 9px;
+  border-radius: 50%;
+}
+
+.info:hover {
+  background: #333333;
+  color: #fff;
+}
+
+.trailer:hover {
+  background: #333333;
+  color: #fff;
+}
+
+footer {
+	background: #000;
+/*	height: 400px;
+*/	padding: 15px 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer .social-icons, footer .about-site, footer .terms-of-use, footer .company, footer .footnote {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+footer .social-icons a i {
+  font-size: 21px;
+	padding: 12px;
+	color: #fff;
+}
+
+footer .social-icons a:hover i {
+	background: #1b1b1b;
+	border-radius: 50%;
+}
+
+footer a {
+	padding-left: 25px;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 250ms all;
+}
+
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 250ms all;
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.imageContainer img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 265px;
+}
+
+
+.imageContainer:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+
+

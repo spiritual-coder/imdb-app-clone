@@ -1,0 +1,51 @@
+IMDB Assignment
+
+Resources:
+
+Header Logo
+
+https://cdn.freebiesupply.com/images/large/2x/imdb-logo-transparent.png
+
+Banner Links
+
+https://images-na.ssl-images-amazon.com/images/G/02/shazam/MRSM-S3-01465-PMHouse-970x250-POST-Final-en-US-HO-PVD3356-t44Gf-8578d594-84c7-402a-bdcc-2a80f137d050.jpg
+
+https://images-na.ssl-images-amazon.com/images/G/02/shazam/970x250-fa68eedb-b5be-410b-b695-db89508cb428.jpg
+
+
+Main Slider Images
+
+https://m.media-amazon.com/images/M/MV5BMTgxYjVlMzEtYWRiNC00ZDY2LWE1OGEtZTE1YzI0YTJiZWRmXkEyXkFqcGdeQW1pYnJ5YW50._V1_QL40_UX1000_CR0,0,1000,563_.jpg
+
+https://m.media-amazon.com/images/M/MV5BY2QyYWE3MGUtZWRjMC00NWUyLTg3NGEtOWIwNGQ3ZTM0NTFiXkEyXkFqcGdeQWRvb2xpbmhk._V1_QL40_UX1000_CR0,0,1000,563_.jpg.jpg
+
+https://m.media-amazon.com/images/M/MV5BMWNlMmYwOTUtMzcyYy00OTgxLTkxZTktZmI3MGNhYTA5OTZkXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_QL40_UX1000_CR0,0,1000,563_.jpg
+
+https://m.media-amazon.com/images/M/MV5BMjNhYTViMzEtYzA4Mi00YmM1LTlhZjAtNzk1ZTM1ZTZlOWM2XkEyXkFqcGdeQXZ3ZXNsZXk@._V1_QL40_UY563_CR0,0,1000,563_.jpg
+
+
+Paatal Lok
+
+https://images-na.ssl-images-amazon.com/images/G/02/shazam/300x250-rectangle--2--5a32e964-4bd3-4ebb-8e97-c679978e4c9e.jpg
+
+Footer
+
+Social Icons
+
+About Site
+
+- Get the IMDb App
+- Help
+- Site Index
+- IMDbPro
+- Box Office Mojo
+- IMDb Developer
+
+Terms
+
+- Press Room
+- Advertising
+- Jobs
+- Conditions of Use
+- Privacy policy
+- Internet-Based Ads
