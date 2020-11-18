@@ -23,3 +23,12 @@ https://imdb-app-clone.netlify.app/
 
 - Fixed Complete UI part sans navbar
 
+##### References:
+
+- https://www.javascripttutorial.net/javascript-fetch-api/
+- https://medium.com/@vinodselvin/create-your-own-templating-system-in-javascript-21a5ea545649
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+- https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+
