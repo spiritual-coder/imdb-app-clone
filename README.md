@@ -23,6 +23,10 @@ https://imdb-app-clone.netlify.app/
 
 - Fixed Complete UI part sans navbar
 
+#### Tasks Completed  on 19 November:
+
+- Added complete responsiveness for mobile phone screens
+
 ##### References:
 
 - https://www.javascripttutorial.net/javascript-fetch-api/
