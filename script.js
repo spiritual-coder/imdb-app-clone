@@ -114,7 +114,7 @@ function createMovieContainer(section) {
 
     const template = `
         <div class="content">
-            <p id="content-close">X</p>
+            <p id="content-close"></p>
         </div>
     `;
 
