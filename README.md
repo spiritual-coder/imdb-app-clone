@@ -5,6 +5,15 @@ a clone of imdb app using HTML, CSS and JavaScript
 
 https://imdb-app-clone.netlify.app/
 
+
+#### Final Updates as of 22 Nov 2020 (Sunday):
+
+- Site is responsive
+- Search functionality is working when we click on the search button entering a keyword
+- Modal view appears when we click on a movie poster or title (for Top picks and In Theaters movies)
+- Movie Data is being fetched from TMDB API
+- To work on documentation, little fixes, code redundancy and final report
+
 #### Things applied till now:
 
 - HTML (basic divs, form, buttons, aside, span tags)
@@ -26,6 +35,7 @@ https://imdb-app-clone.netlify.app/
 #### Tasks Completed  on 19 November:
 
 - Added complete responsiveness for mobile phone screens
+
 
 ##### References:
 
