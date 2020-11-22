@@ -403,6 +403,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: 10px 0 10px;
  /* background: #ff8000;*/
 
@@ -448,41 +449,106 @@ section {
   }
 }
 
-.poster-card #img1 {
-  background: url(https://upload.wikimedia.org/wikipedia/en/3/3c/Poster_of_Mirzapur_2018.jpg);
-  background-position: center;
-  background-size: cover;
+
+
+/* Styling Pop-up Box */
+
+#popup-box {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  pointer-events: none;
 }
 
-.poster-card #img2 {
-  background: url(https://mamasgeeky.com/wp-content/uploads/2020/11/the-queens-gambit-poster.jpg);
-  background-position: center;
-  background-size: cover;
+
+#popup-box.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
 }
 
-.poster-card #img3 {
-  background: url(https://m.media-amazon.com/images/M/MV5BNjgxZTMxNmQtZGFkZS00NDUyLTllMzYtOTE0ZjdlMjM1ZWU0XkEyXkFqcGdeQXVyMTAyMTE1MDA1._V1_UX182_CR0,0,182,268_AL_.jpg);
-  background-position: center;
-  background-size: cover;
+#popup-box a {
+  position: relative;
+  padding: 5px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #111;
 }
 
-.poster-card #img4 {
-  background: url(https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR85,0,630,1200_AL_.jpg);
-  background-position: center;
-  background-size: cover;
+#popup-box .content {
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.poster-card #img5 {
-  background: url(https://i.etsystatic.com/15375993/r/il/cbafe5/1303342253/il_570xN.1303342253_qphh.jpg);
-  background-position: center;
-  background-size: cover;
+#popup-box .img-bx {
+  width: 180px;
+  height: 267px;
 }
 
-.poster-card #img6 {
-  background: url(https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg);
-  background-position: center;
-  background-size: cover;
+#popup-box .movie-overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  padding: 0px 10px;
 }
+
+#popup-box .movie-overview h1 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+#popup-box .movie-overview h1, #popup-box .movie-overview p {
+  color: #000;
+}
+
+
+@media (max-width: 991px) {
+  #popup-box {
+    width: 310px;
+    height: 100vh;
+  }
+
+  #popup-box .content {
+    flex-wrap: wrap;
+  }
+
+  #popup-box .img-bx {
+    width: 135px;
+    height: 200px;
+  }
+
+  #popup-box .movie-overview {
+    margin-top: 10px;
+  }
+
+  #popup-box .movie-overview p {
+    font-size: 14px;
+  }
+
+  #popup-box .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 .poster-card #img7 {
   background: url(https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg);
@@ -556,41 +622,6 @@ section {
   background-size: cover;
 }
 
-.poster-card #img19 {
-  background: url(https://3.imimg.com/data3/MV/VT/MY-7854615/bollywood-paper-poster-500x500.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.poster-card #img20 {
-  background: url(https://m.media-amazon.com/images/M/MV5BN2ZhMTI3MDctYTlhYy00NjBlLWEyOGEtYzE3MjM4MWFkNmQwXkEyXkFqcGdeQXVyNTA3NTQ4OTg@._V1_.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.poster-card #img21 {
-  background: url(https://www.filmibeat.com/ph-big/2017/05/baahubali-2-the-conclusion_149577721640.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.poster-card #img22 {
-  background: url(https://images-na.ssl-images-amazon.com/images/I/91f1iuBw%2B3L._SL1430_.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.poster-card #img23 {
-  background: url(https://buzz.tt/media/posters/53/posters_1_1500.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.poster-card #img24 {
-  background: url(https://upload.wikimedia.org/wikipedia/en/7/78/Bunty_Aur_Babli_poster.jpg);
-  background-position: center;
-  background-size: cover;
-}
 
 .ratings, .movie-title, .watchlist, .trailer-and-info {
   padding: 10px 15px;
@@ -646,12 +677,14 @@ section {
 
 .movie-title {
   width: 160px;
-  height: 58px;
+  height: 50px;
+  overflow-y: hidden;
+  font-size: 16px;
 }
 
 
 .trailer-and-info {
-  margin-top: 6px;
+  margin-top: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -891,7 +924,7 @@ section {
 /* Styling IMDb Originals */
 
 .video-card {
-  width: 390px;
+  width: 360px;
   height: 240px;
   background: #000;
   margin: 10px 15px;
@@ -1000,8 +1033,8 @@ section {
 /* Styling Coming Soon to Box Office movies */
 
 .comingsoon {
-  width: 400px;
-  height: 240px;
+  width: 360px;
+  height: 250px;
   background: #000;
   margin: 10px 15px;
   cursor: pointer;
@@ -1009,7 +1042,7 @@ section {
 
 .comingsoon .coming-img {
   width: 100%;
-  height: 200px;
+  height: 210px;
 }
 
 .comingsoon .coming-img:hover {
@@ -1048,7 +1081,7 @@ section {
 
 
 .editorpicks-card {
-  width: 390px;
+  width: 360px;
   height: 240px;
   background: #000;
   margin: 10px 15px;
@@ -1097,16 +1130,16 @@ section {
 }
 
 .birthday-card {
-  width: 200px;
-  height: 240px;
+  width: 180px;
+  height: 180px;
   background: #000;
   margin: 10px 12px;
   cursor: pointer;
 }
 
 .birthday-card .birthday-img {
-  width: 180px;
-  height: 180px;
+  width: 165px;
+  height: 165px;
   border-radius: 50%;
   background: #1167b1;
   margin: 0 auto;
@@ -1178,7 +1211,7 @@ section {
 }
 
 .news-card {
-  width: 380px;
+  width: 370px;
   height: 133px;
 /*  background: #ffa500;*/
   margin: 10px 15px;
